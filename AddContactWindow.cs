@@ -39,6 +39,10 @@ namespace WinFormsApp1
             //code to load groups in combobox
             this.CB_Groupe.Items.Clear();//Pas trop necessaire mais bon :)
             this.CB_Groupe.Items.AddRange(Global.ContactsGroups.ToArray());
+            if (this.CB_Groupe.Items.Count > 0)
+            {
+                this.CB_Groupe.SelectedIndex = 0;
+            }
         }
     }
 }

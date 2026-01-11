@@ -35,7 +35,7 @@
             Btn_AddContact = new Button();
             GroupBoxMesContatcs = new GroupBox();
             LB_Contacts = new ListBox();
-            comboBox1 = new ComboBox();
+            CB_GroupeInMyContacts = new ComboBox();
             button2 = new Button();
             button1 = new Button();
             PNL_Right = new Panel();
@@ -102,7 +102,7 @@
             // GroupBoxMesContatcs
             // 
             GroupBoxMesContatcs.Controls.Add(LB_Contacts);
-            GroupBoxMesContatcs.Controls.Add(comboBox1);
+            GroupBoxMesContatcs.Controls.Add(CB_GroupeInMyContacts);
             GroupBoxMesContatcs.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             GroupBoxMesContatcs.Location = new Point(0, 10);
             GroupBoxMesContatcs.Name = "GroupBoxMesContatcs";
@@ -121,15 +121,16 @@
             LB_Contacts.Sorted = true;
             LB_Contacts.TabIndex = 1;
             // 
-            // comboBox1
+            // CB_GroupeInMyContacts
             // 
-            comboBox1.Cursor = Cursors.Hand;
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(6, 54);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(293, 40);
-            comboBox1.TabIndex = 0;
+            CB_GroupeInMyContacts.Cursor = Cursors.Hand;
+            CB_GroupeInMyContacts.DropDownStyle = ComboBoxStyle.DropDownList;
+            CB_GroupeInMyContacts.FormattingEnabled = true;
+            CB_GroupeInMyContacts.Location = new Point(6, 54);
+            CB_GroupeInMyContacts.Name = "CB_GroupeInMyContacts";
+            CB_GroupeInMyContacts.Size = new Size(293, 40);
+            CB_GroupeInMyContacts.TabIndex = 0;
+            CB_GroupeInMyContacts.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button2
             // 
@@ -323,7 +324,7 @@
         private Button button1;
         private GroupBox GroupBoxMesContatcs;
         private ListBox LB_Contacts;
-        private ComboBox comboBox1;
+        private ComboBox CB_GroupeInMyContacts;
         private GroupBox Group_Search;
         private Button Btn_AddContact;
         private TextBox TB_Search;
