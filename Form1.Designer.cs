@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             PNL_Left = new Panel();
-            button1 = new Button();
-            button2 = new Button();
-            GroupBoxMesContatcs = new GroupBox();
-            comboBox1 = new ComboBox();
-            LB_Contacts = new ListBox();
-            Btn_AddContact = new Button();
             Group_Search = new GroupBox();
             TB_Search = new TextBox();
+            Btn_AddContact = new Button();
+            GroupBoxMesContatcs = new GroupBox();
+            LB_Contacts = new ListBox();
+            comboBox1 = new ComboBox();
+            button2 = new Button();
+            button1 = new Button();
             PNL_Right = new Panel();
-            PB_Contact_Photo = new PictureBox();
-            LB_Groupe = new Label();
-            LB_Name = new Label();
-            Email = new Label();
-            LB_Email = new Label();
-            Label4 = new Label();
-            Label5 = new Label();
-            label3 = new Label();
-            LB_Tel = new Label();
-            LB_Adress = new Label();
             LB_Ville = new Label();
+            LB_Adress = new Label();
+            LB_Tel = new Label();
+            label3 = new Label();
+            Label5 = new Label();
+            Label4 = new Label();
+            LB_Email = new Label();
+            Email = new Label();
+            LB_Name = new Label();
+            LB_Groupe = new Label();
+            PB_Contact_Photo = new PictureBox();
             PNL_Left.SuspendLayout();
-            GroupBoxMesContatcs.SuspendLayout();
             Group_Search.SuspendLayout();
+            GroupBoxMesContatcs.SuspendLayout();
             PNL_Right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PB_Contact_Photo).BeginInit();
             SuspendLayout();
@@ -67,64 +67,6 @@
             PNL_Left.Name = "PNL_Left";
             PNL_Left.Size = new Size(307, 447);
             PNL_Left.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(65, 60);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(81, 156);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // GroupBoxMesContatcs
-            // 
-            GroupBoxMesContatcs.Controls.Add(LB_Contacts);
-            GroupBoxMesContatcs.Controls.Add(comboBox1);
-            GroupBoxMesContatcs.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            GroupBoxMesContatcs.Location = new Point(0, 10);
-            GroupBoxMesContatcs.Name = "GroupBoxMesContatcs";
-            GroupBoxMesContatcs.Size = new Size(304, 284);
-            GroupBoxMesContatcs.TabIndex = 2;
-            GroupBoxMesContatcs.TabStop = false;
-            GroupBoxMesContatcs.Text = "Mes contacts";
-            GroupBoxMesContatcs.Enter += GroupBoxMesContatcs_Enter;
-            // 
-            // comboBox1
-            // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(6, 54);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(293, 40);
-            comboBox1.TabIndex = 0;
-            // 
-            // LB_Contacts
-            // 
-            LB_Contacts.FormattingEnabled = true;
-            LB_Contacts.Location = new Point(0, 110);
-            LB_Contacts.Name = "LB_Contacts";
-            LB_Contacts.Size = new Size(298, 164);
-            LB_Contacts.Sorted = true;
-            LB_Contacts.TabIndex = 1;
-            // 
-            // Btn_AddContact
-            // 
-            Btn_AddContact.Location = new Point(0, 309);
-            Btn_AddContact.Name = "Btn_AddContact";
-            Btn_AddContact.Size = new Size(298, 34);
-            Btn_AddContact.TabIndex = 3;
-            Btn_AddContact.Text = "Ajouter";
-            Btn_AddContact.UseVisualStyleBackColor = true;
             // 
             // Group_Search
             // 
@@ -144,6 +86,64 @@
             TB_Search.Size = new Size(283, 39);
             TB_Search.TabIndex = 0;
             // 
+            // Btn_AddContact
+            // 
+            Btn_AddContact.Location = new Point(0, 309);
+            Btn_AddContact.Name = "Btn_AddContact";
+            Btn_AddContact.Size = new Size(298, 34);
+            Btn_AddContact.TabIndex = 3;
+            Btn_AddContact.Text = "Ajouter";
+            Btn_AddContact.UseVisualStyleBackColor = true;
+            // 
+            // GroupBoxMesContatcs
+            // 
+            GroupBoxMesContatcs.Controls.Add(LB_Contacts);
+            GroupBoxMesContatcs.Controls.Add(comboBox1);
+            GroupBoxMesContatcs.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GroupBoxMesContatcs.Location = new Point(0, 10);
+            GroupBoxMesContatcs.Name = "GroupBoxMesContatcs";
+            GroupBoxMesContatcs.Size = new Size(304, 284);
+            GroupBoxMesContatcs.TabIndex = 2;
+            GroupBoxMesContatcs.TabStop = false;
+            GroupBoxMesContatcs.Text = "Mes contacts";
+            GroupBoxMesContatcs.Enter += GroupBoxMesContatcs_Enter;
+            // 
+            // LB_Contacts
+            // 
+            LB_Contacts.FormattingEnabled = true;
+            LB_Contacts.Location = new Point(0, 110);
+            LB_Contacts.Name = "LB_Contacts";
+            LB_Contacts.Size = new Size(298, 164);
+            LB_Contacts.Sorted = true;
+            LB_Contacts.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(6, 54);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(293, 40);
+            comboBox1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(81, 156);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 34);
+            button2.TabIndex = 1;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(65, 60);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // PNL_Right
             // 
             PNL_Right.Controls.Add(LB_Ville);
@@ -162,56 +162,55 @@
             PNL_Right.Size = new Size(470, 444);
             PNL_Right.TabIndex = 1;
             // 
-            // PB_Contact_Photo
+            // LB_Ville
             // 
-            PB_Contact_Photo.BorderStyle = BorderStyle.FixedSingle;
-            PB_Contact_Photo.Location = new Point(12, 16);
-            PB_Contact_Photo.Name = "PB_Contact_Photo";
-            PB_Contact_Photo.Size = new Size(455, 229);
-            PB_Contact_Photo.SizeMode = PictureBoxSizeMode.CenterImage;
-            PB_Contact_Photo.TabIndex = 0;
-            PB_Contact_Photo.TabStop = false;
+            LB_Ville.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LB_Ville.Location = new Point(106, 402);
+            LB_Ville.Name = "LB_Ville";
+            LB_Ville.Size = new Size(333, 32);
+            LB_Ville.TabIndex = 10;
+            LB_Ville.Text = "Kinshasa";
+            LB_Ville.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // LB_Groupe
+            // LB_Adress
             // 
-            LB_Groupe.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LB_Groupe.Location = new Point(274, 207);
-            LB_Groupe.Name = "LB_Groupe";
-            LB_Groupe.Size = new Size(193, 38);
-            LB_Groupe.TabIndex = 1;
-            LB_Groupe.Text = "Groupe";
-            LB_Groupe.TextAlign = ContentAlignment.MiddleRight;
+            LB_Adress.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LB_Adress.Location = new Point(106, 364);
+            LB_Adress.Name = "LB_Adress";
+            LB_Adress.Size = new Size(333, 32);
+            LB_Adress.TabIndex = 9;
+            LB_Adress.Text = "Kinsuka Ngaliema";
+            LB_Adress.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // LB_Name
+            // LB_Tel
             // 
-            LB_Name.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LB_Name.Location = new Point(12, 246);
-            LB_Name.Name = "LB_Name";
-            LB_Name.Size = new Size(458, 38);
-            LB_Name.TabIndex = 2;
-            LB_Name.Text = "Prénom Nom";
-            LB_Name.TextAlign = ContentAlignment.MiddleCenter;
+            LB_Tel.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LB_Tel.Location = new Point(106, 324);
+            LB_Tel.Name = "LB_Tel";
+            LB_Tel.Size = new Size(333, 32);
+            LB_Tel.TabIndex = 8;
+            LB_Tel.Text = "0xxxxxxxxx";
+            LB_Tel.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // Email
+            // label3
             // 
-            Email.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Email.Location = new Point(24, 284);
-            Email.Name = "Email";
-            Email.Size = new Size(76, 23);
-            Email.TabIndex = 3;
-            Email.Text = "Email :";
-            Email.TextAlign = ContentAlignment.MiddleRight;
+            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(24, 403);
+            label3.Name = "label3";
+            label3.Size = new Size(76, 23);
+            label3.TabIndex = 7;
+            label3.Text = "Ville :";
+            label3.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // LB_Email
+            // Label5
             // 
-            LB_Email.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LB_Email.Location = new Point(106, 280);
-            LB_Email.Name = "LB_Email";
-            LB_Email.Size = new Size(333, 32);
-            LB_Email.TabIndex = 4;
-            LB_Email.Text = "joelmuhindok@gmail.com";
-            LB_Email.TextAlign = ContentAlignment.MiddleLeft;
-            LB_Email.Click += label1_Click;
+            Label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label5.Location = new Point(3, 364);
+            Label5.Name = "Label5";
+            Label5.Size = new Size(95, 32);
+            Label5.TabIndex = 6;
+            Label5.Text = "Adresse :";
+            Label5.TextAlign = ContentAlignment.MiddleRight;
             // 
             // Label4
             // 
@@ -224,55 +223,56 @@
             Label4.TextAlign = ContentAlignment.MiddleRight;
             Label4.Click += label1_Click_1;
             // 
-            // Label5
+            // LB_Email
             // 
-            Label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label5.Location = new Point(3, 364);
-            Label5.Name = "Label5";
-            Label5.Size = new Size(95, 32);
-            Label5.TabIndex = 6;
-            Label5.Text = "Adresse :";
-            Label5.TextAlign = ContentAlignment.MiddleRight;
+            LB_Email.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LB_Email.Location = new Point(106, 280);
+            LB_Email.Name = "LB_Email";
+            LB_Email.Size = new Size(333, 32);
+            LB_Email.TabIndex = 4;
+            LB_Email.Text = "joelmuhindok@gmail.com";
+            LB_Email.TextAlign = ContentAlignment.MiddleLeft;
+            LB_Email.Click += label1_Click;
             // 
-            // label3
+            // Email
             // 
-            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(24, 403);
-            label3.Name = "label3";
-            label3.Size = new Size(76, 23);
-            label3.TabIndex = 7;
-            label3.Text = "Ville :";
-            label3.TextAlign = ContentAlignment.MiddleRight;
+            Email.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Email.Location = new Point(24, 284);
+            Email.Name = "Email";
+            Email.Size = new Size(76, 23);
+            Email.TabIndex = 3;
+            Email.Text = "Email :";
+            Email.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // LB_Tel
+            // LB_Name
             // 
-            LB_Tel.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LB_Tel.Location = new Point(106, 324);
-            LB_Tel.Name = "LB_Tel";
-            LB_Tel.Size = new Size(333, 32);
-            LB_Tel.TabIndex = 8;
-            LB_Tel.Text = "0xxxxxxxxx";
-            LB_Tel.TextAlign = ContentAlignment.MiddleLeft;
+            LB_Name.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LB_Name.Location = new Point(12, 246);
+            LB_Name.Name = "LB_Name";
+            LB_Name.Size = new Size(458, 38);
+            LB_Name.TabIndex = 2;
+            LB_Name.Text = "Prénom Nom";
+            LB_Name.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // LB_Adress
+            // LB_Groupe
             // 
-            LB_Adress.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LB_Adress.Location = new Point(106, 364);
-            LB_Adress.Name = "LB_Adress";
-            LB_Adress.Size = new Size(333, 32);
-            LB_Adress.TabIndex = 9;
-            LB_Adress.Text = "Kinsuka Ngaliema";
-            LB_Adress.TextAlign = ContentAlignment.MiddleLeft;
+            LB_Groupe.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LB_Groupe.Location = new Point(274, 207);
+            LB_Groupe.Name = "LB_Groupe";
+            LB_Groupe.Size = new Size(184, 38);
+            LB_Groupe.TabIndex = 1;
+            LB_Groupe.Text = "Groupe";
+            LB_Groupe.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // LB_Ville
+            // PB_Contact_Photo
             // 
-            LB_Ville.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LB_Ville.Location = new Point(106, 402);
-            LB_Ville.Name = "LB_Ville";
-            LB_Ville.Size = new Size(333, 32);
-            LB_Ville.TabIndex = 10;
-            LB_Ville.Text = "Kinshasa";
-            LB_Ville.TextAlign = ContentAlignment.MiddleLeft;
+            PB_Contact_Photo.BorderStyle = BorderStyle.FixedSingle;
+            PB_Contact_Photo.Location = new Point(12, 16);
+            PB_Contact_Photo.Name = "PB_Contact_Photo";
+            PB_Contact_Photo.Size = new Size(446, 229);
+            PB_Contact_Photo.SizeMode = PictureBoxSizeMode.CenterImage;
+            PB_Contact_Photo.TabIndex = 0;
+            PB_Contact_Photo.TabStop = false;
             // 
             // MyContacts
             // 
@@ -285,9 +285,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MyContacts";
             PNL_Left.ResumeLayout(false);
-            GroupBoxMesContatcs.ResumeLayout(false);
             Group_Search.ResumeLayout(false);
             Group_Search.PerformLayout();
+            GroupBoxMesContatcs.ResumeLayout(false);
             PNL_Right.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PB_Contact_Photo).EndInit();
             ResumeLayout(false);
