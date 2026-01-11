@@ -49,6 +49,7 @@
             LB_Name = new Label();
             LB_Groupe = new Label();
             PB_Contact_Photo = new PictureBox();
+            Btn_DeleteImage = new Button();
             PNL_Left.SuspendLayout();
             Group_Search.SuspendLayout();
             GroupBoxMesContatcs.SuspendLayout();
@@ -146,6 +147,7 @@
             // 
             // PNL_Right
             // 
+            PNL_Right.Controls.Add(Btn_DeleteImage);
             PNL_Right.Controls.Add(LB_Ville);
             PNL_Right.Controls.Add(LB_Adress);
             PNL_Right.Controls.Add(LB_Tel);
@@ -274,6 +276,17 @@
             PB_Contact_Photo.TabIndex = 0;
             PB_Contact_Photo.TabStop = false;
             // 
+            // Btn_DeleteImage
+            // 
+            Btn_DeleteImage.BackColor = Color.Red;
+            Btn_DeleteImage.Location = new Point(347, 16);
+            Btn_DeleteImage.Name = "Btn_DeleteImage";
+            Btn_DeleteImage.Size = new Size(111, 34);
+            Btn_DeleteImage.TabIndex = 5;
+            Btn_DeleteImage.Text = "Supprimer";
+            Btn_DeleteImage.UseVisualStyleBackColor = false;
+            Btn_DeleteImage.Click += button3_Click;
+            // 
             // MyContacts
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -316,5 +329,6 @@
         private Label label3;
         private Label Label5;
         private Label Label4;
+        private Button Btn_DeleteImage;
     }
 }

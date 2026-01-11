@@ -182,7 +182,7 @@
             // 
             // TB_Adresse
             // 
-            TB_Adresse.Location = new Point(107, 183);
+            TB_Adresse.Location = new Point(107, 182);
             TB_Adresse.Name = "TB_Adresse";
             TB_Adresse.Size = new Size(176, 31);
             TB_Adresse.TabIndex = 20;

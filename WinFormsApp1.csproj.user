@@ -4,7 +4,7 @@
     <Compile Update="AddContactWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="MyContacts.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
