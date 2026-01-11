@@ -39,6 +39,7 @@
             button2 = new Button();
             button1 = new Button();
             PNL_Right = new Panel();
+            Btn_DeleteImage = new Button();
             LB_Ville = new Label();
             LB_Adress = new Label();
             LB_Tel = new Label();
@@ -50,7 +51,6 @@
             LB_Name = new Label();
             LB_Groupe = new Label();
             PB_Contact_Photo = new PictureBox();
-            Btn_DeleteImage = new Button();
             PNL_Left.SuspendLayout();
             Group_Search.SuspendLayout();
             GroupBoxMesContatcs.SuspendLayout();
@@ -90,6 +90,7 @@
             // 
             // Btn_AddContact
             // 
+            Btn_AddContact.Cursor = Cursors.Hand;
             Btn_AddContact.Location = new Point(0, 309);
             Btn_AddContact.Name = "Btn_AddContact";
             Btn_AddContact.Size = new Size(298, 34);
@@ -121,6 +122,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.Cursor = Cursors.Hand;
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(6, 54);
@@ -164,6 +166,21 @@
             PNL_Right.Name = "PNL_Right";
             PNL_Right.Size = new Size(470, 444);
             PNL_Right.TabIndex = 1;
+            // 
+            // Btn_DeleteImage
+            // 
+            Btn_DeleteImage.BackColor = Color.Transparent;
+            Btn_DeleteImage.BackgroundImage = (Image)resources.GetObject("Btn_DeleteImage.BackgroundImage");
+            Btn_DeleteImage.BackgroundImageLayout = ImageLayout.Stretch;
+            Btn_DeleteImage.Cursor = Cursors.Hand;
+            Btn_DeleteImage.FlatStyle = FlatStyle.Flat;
+            Btn_DeleteImage.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Btn_DeleteImage.Location = new Point(396, 16);
+            Btn_DeleteImage.Name = "Btn_DeleteImage";
+            Btn_DeleteImage.Size = new Size(62, 47);
+            Btn_DeleteImage.TabIndex = 5;
+            Btn_DeleteImage.UseVisualStyleBackColor = false;
+            Btn_DeleteImage.Click += button3_Click;
             // 
             // LB_Ville
             // 
@@ -278,20 +295,6 @@
             PB_Contact_Photo.SizeMode = PictureBoxSizeMode.CenterImage;
             PB_Contact_Photo.TabIndex = 0;
             PB_Contact_Photo.TabStop = false;
-            // 
-            // Btn_DeleteImage
-            // 
-            Btn_DeleteImage.BackColor = Color.Transparent;
-            Btn_DeleteImage.BackgroundImage = (Image)resources.GetObject("Btn_DeleteImage.BackgroundImage");
-            Btn_DeleteImage.BackgroundImageLayout = ImageLayout.Stretch;
-            Btn_DeleteImage.FlatStyle = FlatStyle.Flat;
-            Btn_DeleteImage.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Btn_DeleteImage.Location = new Point(396, 16);
-            Btn_DeleteImage.Name = "Btn_DeleteImage";
-            Btn_DeleteImage.Size = new Size(62, 47);
-            Btn_DeleteImage.TabIndex = 5;
-            Btn_DeleteImage.UseVisualStyleBackColor = false;
-            Btn_DeleteImage.Click += button3_Click;
             // 
             // MyContacts
             // 
