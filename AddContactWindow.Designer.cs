@@ -30,20 +30,20 @@
         {
             PB_Contact_Photo = new PictureBox();
             panel1 = new Panel();
+            CB_Groupe = new ComboBox();
+            TB_City = new TextBox();
+            TB_Adresse = new TextBox();
+            TB_Tel = new TextBox();
+            TB_Email = new TextBox();
+            TB_Name = new TextBox();
+            TB_FirstName = new TextBox();
+            label6 = new Label();
+            label1 = new Label();
+            label2 = new Label();
             label3 = new Label();
             Label5 = new Label();
             Label4 = new Label();
             Email = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label6 = new Label();
-            TB_FirstName = new TextBox();
-            TB_Name = new TextBox();
-            TB_Email = new TextBox();
-            TB_Tel = new TextBox();
-            TB_Adresse = new TextBox();
-            TB_City = new TextBox();
-            CB_Groupe = new ComboBox();
             Btn_AddContact = new Button();
             Btn_Choise_Image = new Button();
             ((System.ComponentModel.ISupportInitialize)PB_Contact_Photo).BeginInit();
@@ -80,6 +80,89 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(299, 292);
             panel1.TabIndex = 2;
+            // 
+            // CB_Groupe
+            // 
+            CB_Groupe.DropDownStyle = ComboBoxStyle.DropDownList;
+            CB_Groupe.FlatStyle = FlatStyle.Flat;
+            CB_Groupe.FormattingEnabled = true;
+            CB_Groupe.Location = new Point(105, 254);
+            CB_Groupe.Name = "CB_Groupe";
+            CB_Groupe.Size = new Size(182, 33);
+            CB_Groupe.TabIndex = 22;
+            // 
+            // TB_City
+            // 
+            TB_City.Location = new Point(107, 220);
+            TB_City.Name = "TB_City";
+            TB_City.Size = new Size(176, 31);
+            TB_City.TabIndex = 21;
+            // 
+            // TB_Adresse
+            // 
+            TB_Adresse.Location = new Point(107, 182);
+            TB_Adresse.Name = "TB_Adresse";
+            TB_Adresse.Size = new Size(176, 31);
+            TB_Adresse.TabIndex = 20;
+            // 
+            // TB_Tel
+            // 
+            TB_Tel.Location = new Point(107, 141);
+            TB_Tel.Name = "TB_Tel";
+            TB_Tel.Size = new Size(176, 31);
+            TB_Tel.TabIndex = 19;
+            // 
+            // TB_Email
+            // 
+            TB_Email.Location = new Point(107, 102);
+            TB_Email.Name = "TB_Email";
+            TB_Email.Size = new Size(176, 31);
+            TB_Email.TabIndex = 18;
+            // 
+            // TB_Name
+            // 
+            TB_Name.Location = new Point(107, 64);
+            TB_Name.Name = "TB_Name";
+            TB_Name.Size = new Size(176, 31);
+            TB_Name.TabIndex = 17;
+            // 
+            // TB_FirstName
+            // 
+            TB_FirstName.Location = new Point(107, 27);
+            TB_FirstName.Name = "TB_FirstName";
+            TB_FirstName.Size = new Size(176, 31);
+            TB_FirstName.TabIndex = 16;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(4, 250);
+            label6.Name = "label6";
+            label6.Size = new Size(97, 37);
+            label6.TabIndex = 15;
+            label6.Text = "Groupe :";
+            label6.TextAlign = ContentAlignment.MiddleRight;
+            label6.Click += label6_Click;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(4, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 37);
+            label1.TabIndex = 14;
+            label1.Text = "Prénom :";
+            label1.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(23, 61);
+            label2.Name = "label2";
+            label2.Size = new Size(76, 23);
+            label2.TabIndex = 13;
+            label2.Text = "Nom :";
+            label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -120,87 +203,6 @@
             Email.TabIndex = 8;
             Email.Text = "Email :";
             Email.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(23, 61);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 23);
-            label2.TabIndex = 13;
-            label2.Text = "Nom :";
-            label2.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(4, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(97, 37);
-            label1.TabIndex = 14;
-            label1.Text = "Prénom :";
-            label1.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            label6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(4, 250);
-            label6.Name = "label6";
-            label6.Size = new Size(97, 37);
-            label6.TabIndex = 15;
-            label6.Text = "Groupe :";
-            label6.TextAlign = ContentAlignment.MiddleRight;
-            label6.Click += label6_Click;
-            // 
-            // TB_FirstName
-            // 
-            TB_FirstName.Location = new Point(107, 27);
-            TB_FirstName.Name = "TB_FirstName";
-            TB_FirstName.Size = new Size(176, 31);
-            TB_FirstName.TabIndex = 16;
-            // 
-            // TB_Name
-            // 
-            TB_Name.Location = new Point(107, 64);
-            TB_Name.Name = "TB_Name";
-            TB_Name.Size = new Size(176, 31);
-            TB_Name.TabIndex = 17;
-            // 
-            // TB_Email
-            // 
-            TB_Email.Location = new Point(107, 102);
-            TB_Email.Name = "TB_Email";
-            TB_Email.Size = new Size(176, 31);
-            TB_Email.TabIndex = 18;
-            // 
-            // TB_Tel
-            // 
-            TB_Tel.Location = new Point(107, 141);
-            TB_Tel.Name = "TB_Tel";
-            TB_Tel.Size = new Size(176, 31);
-            TB_Tel.TabIndex = 19;
-            // 
-            // TB_Adresse
-            // 
-            TB_Adresse.Location = new Point(107, 182);
-            TB_Adresse.Name = "TB_Adresse";
-            TB_Adresse.Size = new Size(176, 31);
-            TB_Adresse.TabIndex = 20;
-            // 
-            // TB_City
-            // 
-            TB_City.Location = new Point(107, 220);
-            TB_City.Name = "TB_City";
-            TB_City.Size = new Size(176, 31);
-            TB_City.TabIndex = 21;
-            // 
-            // CB_Groupe
-            // 
-            CB_Groupe.FormattingEnabled = true;
-            CB_Groupe.Location = new Point(105, 254);
-            CB_Groupe.Name = "CB_Groupe";
-            CB_Groupe.Size = new Size(182, 33);
-            CB_Groupe.TabIndex = 22;
             // 
             // Btn_AddContact
             // 

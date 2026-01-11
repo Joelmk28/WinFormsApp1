@@ -26,5 +26,11 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void Btn_AddContact_Click(object sender, EventArgs e)
+        {
+            AddContactWindow addContactWindow = new AddContactWindow();
+            addContactWindow.ShowDialog();
+        }
     }
 }
