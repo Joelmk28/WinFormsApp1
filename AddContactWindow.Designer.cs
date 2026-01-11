@@ -214,6 +214,7 @@
             Btn_AddContact.TabIndex = 3;
             Btn_AddContact.Text = "Ajouter";
             Btn_AddContact.UseVisualStyleBackColor = true;
+            Btn_AddContact.Click += Btn_AddContact_Click_1;
             // 
             // Btn_Choise_Image
             // 

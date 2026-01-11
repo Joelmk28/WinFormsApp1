@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using WinFormsApp1.Models;
 
 namespace WinFormsApp1
 {
@@ -43,6 +44,32 @@ namespace WinFormsApp1
             {
                 this.CB_Groupe.SelectedIndex = 0;
             }
+        }
+
+        private void Btn_AddContact_Click_1(object sender, EventArgs e)
+        {
+            string nom = TB_Name.Text;
+            string prenom = TB_FirstName.Text;
+            string email = TB_Email.Text;
+            string phone = TB_Tel.Text;
+            string adresse = TB_Adresse.Text;
+            string ville = TB_City.Text;
+
+            if (CB_Groupe.SelectedItem == null)
+            {
+                MessageBox.Show("Veuillez sélectionner un groupe.");
+                return;
+            }
+
+            Group group = (Group)CB_Groupe.SelectedItem;
+
+            
+
+            MessageBox.Show($"Contact ajouté :\nNom : {nom}\nPrénom : {prenom}\nEmail : {email}\nTéléphone : {phone}\nAdresse : {adresse}\nVille : {ville}\nGroupe : {group.Name}");
+
+
+
+
         }
     }
 }
