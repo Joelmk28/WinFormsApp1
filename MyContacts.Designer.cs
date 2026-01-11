@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyContacts));
             PNL_Left = new Panel();
             Group_Search = new GroupBox();
             TB_Search = new TextBox();
@@ -268,6 +269,8 @@
             // 
             // PB_Contact_Photo
             // 
+            PB_Contact_Photo.BackgroundImage = (Image)resources.GetObject("PB_Contact_Photo.BackgroundImage");
+            PB_Contact_Photo.BackgroundImageLayout = ImageLayout.Stretch;
             PB_Contact_Photo.BorderStyle = BorderStyle.FixedSingle;
             PB_Contact_Photo.Location = new Point(12, 16);
             PB_Contact_Photo.Name = "PB_Contact_Photo";
@@ -278,12 +281,15 @@
             // 
             // Btn_DeleteImage
             // 
-            Btn_DeleteImage.BackColor = Color.Red;
-            Btn_DeleteImage.Location = new Point(347, 16);
+            Btn_DeleteImage.BackColor = Color.Transparent;
+            Btn_DeleteImage.BackgroundImage = (Image)resources.GetObject("Btn_DeleteImage.BackgroundImage");
+            Btn_DeleteImage.BackgroundImageLayout = ImageLayout.Stretch;
+            Btn_DeleteImage.FlatStyle = FlatStyle.Flat;
+            Btn_DeleteImage.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Btn_DeleteImage.Location = new Point(396, 16);
             Btn_DeleteImage.Name = "Btn_DeleteImage";
-            Btn_DeleteImage.Size = new Size(111, 34);
+            Btn_DeleteImage.Size = new Size(62, 47);
             Btn_DeleteImage.TabIndex = 5;
-            Btn_DeleteImage.Text = "Supprimer";
             Btn_DeleteImage.UseVisualStyleBackColor = false;
             Btn_DeleteImage.Click += button3_Click;
             // 
