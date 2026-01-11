@@ -13,6 +13,7 @@ namespace WinFormsApp1
         public AddContactWindow()
         {
             InitializeComponent();
+            LoadGroupsInComboBox();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,6 +29,16 @@ namespace WinFormsApp1
         private void Btn_AddContact_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        //fonctions custom
+
+        private void LoadGroupsInComboBox()
+        {
+            //code to load groups in combobox
+            this.CB_Groupe.Items.Clear();//Pas trop necessaire mais bon :)
+            this.CB_Groupe.Items.AddRange(Global.ContactsGroups.ToArray());
         }
     }
 }
