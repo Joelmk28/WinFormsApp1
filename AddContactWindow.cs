@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using WinFormsApp1.Models;
+using System.Drawing;
 
 namespace WinFormsApp1
 {
@@ -55,20 +56,59 @@ namespace WinFormsApp1
             string adresse = TB_Adresse.Text;
             string ville = TB_City.Text;
 
+            if(CheckInputs(nom, prenom, email, phone, adresse, ville) == false)
+            {
+                MessageBox.Show("Veuillez remplir tous les champs obligatoires.","Contacts",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
+
+
             if (CB_Groupe.SelectedItem == null)
             {
                 MessageBox.Show("Veuillez sélectionner un groupe.");
                 return;
             }
 
-            Group group = (Group)CB_Groupe.SelectedItem;
-
+            /*if (PB_Contact_Photo.Image == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une photo de contact.");
+                return;
+            }
             
+            Image photo = PB_Contact_Photo.Image;
+            */
+            Group group = (Group)CB_Groupe.SelectedItem;
+            //  MessageBox.Show($"Contact ajouté :\nNom : {nom}\nPrénom : {prenom}\nEmail : {email}\nTéléphone : {phone}\nAdresse : {adresse}\nVille : {ville}\nGroupe : {group.Name}");
 
-            MessageBox.Show($"Contact ajouté :\nNom : {nom}\nPrénom : {prenom}\nEmail : {email}\nTéléphone : {phone}\nAdresse : {adresse}\nVille : {ville}\nGroupe : {group.Name}");
+            Contact contact = new Contact()
+            {
+
+                FirstName = nom,
+                LastName = prenom,
+                PhoneNumber = phone,
+                Email = email,
+                Address = adresse,
+                City = ville
+
+            };
+
+            CB_Groupe.Items.Add(contact);
+
+            //fermeture de la fenetre
+            DialogResult = DialogResult.OK;
+
+        }
 
 
-
+        private bool CheckInputs(string nom,string prenom,string email,string phone,string adresse,string ville)
+        {
+            //code to check input
+            return !string.IsNullOrEmpty(nom) && 
+                !string.IsNullOrEmpty(prenom) &&
+                !string.IsNullOrEmpty(email) &&
+                !string.IsNullOrEmpty(phone) &&
+                !string.IsNullOrEmpty(adresse) &&
+                !string.IsNullOrEmpty(ville) ;
 
         }
     }
