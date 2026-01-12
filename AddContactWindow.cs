@@ -56,9 +56,9 @@ namespace WinFormsApp1
             string adresse = TB_Adresse.Text;
             string ville = TB_City.Text;
 
-            if(CheckInputs(nom, prenom, email, phone, adresse, ville) == false)
+            if (CheckInputs(nom, prenom, email, phone, adresse, ville) == false)
             {
-                MessageBox.Show("Veuillez remplir tous les champs obligatoires.","Contacts",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Veuillez remplir tous les champs obligatoires.", "Contacts", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -100,15 +100,31 @@ namespace WinFormsApp1
         }
 
 
-        private bool CheckInputs(string nom,string prenom,string email,string phone,string adresse,string ville)
+        private bool CheckInputs(string nom, string prenom, string email, string phone, string adresse, string ville)
         {
             //code to check input
-            return !string.IsNullOrEmpty(nom) && 
+            return !string.IsNullOrEmpty(nom) &&
                 !string.IsNullOrEmpty(prenom) &&
                 !string.IsNullOrEmpty(email) &&
                 !string.IsNullOrEmpty(phone) &&
                 !string.IsNullOrEmpty(adresse) &&
-                !string.IsNullOrEmpty(ville) ;
+                !string.IsNullOrEmpty(ville);
+
+        }
+
+        private void Btn_Choise_Image_Click(object sender, EventArgs e)
+        {
+            DialogResult result = OFD_ImageFile.ShowDialog();
+            if (result == DialogResult.OK) {
+                string filePath = OFD_ImageFile.FileName;
+                Image image = Image.FromFile(filePath);
+                PB_Contact_Photo.Image = image;
+            }
+
+        }
+
+        private void AddContactWindow_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -46,6 +46,9 @@
             Email = new Label();
             Btn_AddContact = new Button();
             Btn_Choise_Image = new Button();
+            OFD_Image = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
+            OFD_ImageFile = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)PB_Contact_Photo).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -53,10 +56,11 @@
             // PB_Contact_Photo
             // 
             PB_Contact_Photo.BorderStyle = BorderStyle.FixedSingle;
-            PB_Contact_Photo.Location = new Point(9, 8);
+            PB_Contact_Photo.Cursor = Cursors.Hand;
+            PB_Contact_Photo.Location = new Point(25, 8);
             PB_Contact_Photo.Name = "PB_Contact_Photo";
-            PB_Contact_Photo.Size = new Size(299, 229);
-            PB_Contact_Photo.SizeMode = PictureBoxSizeMode.CenterImage;
+            PB_Contact_Photo.Size = new Size(267, 189);
+            PB_Contact_Photo.SizeMode = PictureBoxSizeMode.StretchImage;
             PB_Contact_Photo.TabIndex = 1;
             PB_Contact_Photo.TabStop = false;
             // 
@@ -225,6 +229,17 @@
             Btn_Choise_Image.TabIndex = 23;
             Btn_Choise_Image.Text = "Choisir une image";
             Btn_Choise_Image.UseVisualStyleBackColor = true;
+            Btn_Choise_Image.Click += Btn_Choise_Image_Click;
+            // 
+            // OFD_Image
+            // 
+            OFD_Image.FileName = "Choisissez une image";
+            OFD_Image.Filter = "(Fichiers JPG|*.jpg)|(Fichiers PNG|*.png)";
+            // 
+            // OFD_ImageFile
+            // 
+            OFD_ImageFile.FileName = "Choisir image";
+            OFD_ImageFile.Filter = "(Finchie PNG)|*.png";
             // 
             // AddContactWindow
             // 
@@ -238,6 +253,7 @@
             Name = "AddContactWindow";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ajouter un contact";
+            Load += AddContactWindow_Load;
             ((System.ComponentModel.ISupportInitialize)PB_Contact_Photo).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -264,5 +280,8 @@
         private ComboBox CB_Groupe;
         private Button Btn_AddContact;
         private Button Btn_Choise_Image;
+        private OpenFileDialog OFD_Image;
+        private SaveFileDialog saveFileDialog1;
+        private OpenFileDialog OFD_ImageFile;
     }
 }
