@@ -51,11 +51,13 @@ namespace WinFormsApp1
         private void UpdateContactsList()
         {
             int SelectedIndex = this.CB_GroupeInMyContacts.SelectedIndex;
-            if (SelectedIndex == 0) {
+            if (SelectedIndex == 0)
+            {
                 ShowAllContacts();
             }
-            else if (SelectedIndex > 0) {
-                Group group = (Group) CB_GroupeInMyContacts.SelectedItem;
+            else if (SelectedIndex > 0)
+            {
+                Group group = (Group)CB_GroupeInMyContacts.SelectedItem;
                 ShowContactsOf(group);
             }
 
@@ -64,10 +66,11 @@ namespace WinFormsApp1
         private void Btn_AddContact_Click(object sender, EventArgs e)
         {
             AddContactWindow addContactWindow = new AddContactWindow();
-        
+
             DialogResult result = addContactWindow.ShowDialog();
 
-            if (result == DialogResult.OK) {
+            if (result == DialogResult.OK)
+            {
                 UpdateContactsList();
             }
 
@@ -75,7 +78,7 @@ namespace WinFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            UpdateContactsList();
         }
 
         private void LoadGroupsInComboBox()
@@ -88,6 +91,53 @@ namespace WinFormsApp1
             {
                 this.CB_GroupeInMyContacts.SelectedIndex = 0;
             }
+        }
+
+
+        private void ClearInfos()
+        {
+            this.LB_Name.Text = "";
+            this.LB_Adress.Text = "";
+            this.LB_Email.Text = "";
+            this.LB_Tel.Text = "";
+            this.LB_Groupe.Text = "";
+            this.LB_Ville.Text = "";
+            this.PB_Contact_Photo.Image = null;
+            
+        }
+
+
+        private void ShowInfoOf(Contact contact)
+        {
+            ClearInfos();
+            this.LB_Name.Text = contact.ToString();
+            this.LB_Adress.Text = contact.Address;
+            this.LB_Email.Text = contact.Email;
+            this.LB_Tel.Text = contact.PhoneNumber;
+            this.LB_Groupe.Text = CB_GroupeInMyContacts.SelectedItem.ToString();
+            this.LB_Ville.Text = contact.City;
+            if (contact.Photo != null)
+            {
+                this.PB_Contact_Photo.Image = contact.Photo;
+            }
+            else
+            {
+                this.PB_Contact_Photo.Image = null; // assuming you have a default image in resources
+            }
+        }
+        private void LB_Contacts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Contact contact = (Contact)LB_Contacts.SelectedItem;
+            if (contact != null)
+            {
+                ShowInfoOf(contact);
+            }
+
+        }
+
+        private void PB_Contact_Photo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

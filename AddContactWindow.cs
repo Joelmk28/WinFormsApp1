@@ -70,14 +70,14 @@ namespace WinFormsApp1
                 return;
             }
 
-            /*if (PB_Contact_Photo.Image == null)
+            if (PB_Contact_Photo.Image == null)
             {
                 MessageBox.Show("Veuillez sélectionner une photo de contact.");
                 return;
             }
             
             Image photo = PB_Contact_Photo.Image;
-            */
+            
             Group group = (Group)CB_Groupe.SelectedItem;
             //  MessageBox.Show($"Contact ajouté :\nNom : {nom}\nPrénom : {prenom}\nEmail : {email}\nTéléphone : {phone}\nAdresse : {adresse}\nVille : {ville}\nGroupe : {group.Name}");
 
@@ -89,11 +89,15 @@ namespace WinFormsApp1
                 PhoneNumber = phone,
                 Email = email,
                 Address = adresse,
-                City = ville
+                City = ville,
+                Photo = photo,
 
             };
 
-            CB_Groupe.Items.Add(contact);
+            
+Global:
+            group.ContactsList.Add(contact);
+           // CB_Groupe.Items.Add(contact);
 
             //fermeture de la fenetre
             DialogResult = DialogResult.OK;

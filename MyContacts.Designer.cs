@@ -120,6 +120,7 @@
             LB_Contacts.Size = new Size(298, 164);
             LB_Contacts.Sorted = true;
             LB_Contacts.TabIndex = 1;
+            LB_Contacts.SelectedIndexChanged += LB_Contacts_SelectedIndexChanged;
             // 
             // CB_GroupeInMyContacts
             // 
@@ -293,10 +294,11 @@
             PB_Contact_Photo.BorderStyle = BorderStyle.FixedSingle;
             PB_Contact_Photo.Location = new Point(12, 16);
             PB_Contact_Photo.Name = "PB_Contact_Photo";
-            PB_Contact_Photo.Size = new Size(446, 229);
+            PB_Contact_Photo.Size = new Size(446, 227);
             PB_Contact_Photo.SizeMode = PictureBoxSizeMode.StretchImage;
             PB_Contact_Photo.TabIndex = 0;
             PB_Contact_Photo.TabStop = false;
+            PB_Contact_Photo.Click += PB_Contact_Photo_Click;
             // 
             // MyContacts
             // 
