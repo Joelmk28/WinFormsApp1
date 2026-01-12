@@ -34,7 +34,6 @@
             TB_Search = new TextBox();
             Btn_AddContact = new Button();
             GroupBoxMesContatcs = new GroupBox();
-            button3 = new Button();
             LB_Contacts = new ListBox();
             CB_GroupeInMyContacts = new ComboBox();
             button2 = new Button();
@@ -102,7 +101,6 @@
             // 
             // GroupBoxMesContatcs
             // 
-            GroupBoxMesContatcs.Controls.Add(button3);
             GroupBoxMesContatcs.Controls.Add(LB_Contacts);
             GroupBoxMesContatcs.Controls.Add(CB_GroupeInMyContacts);
             GroupBoxMesContatcs.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -113,15 +111,6 @@
             GroupBoxMesContatcs.TabStop = false;
             GroupBoxMesContatcs.Text = "Mes contacts";
             GroupBoxMesContatcs.Enter += GroupBoxMesContatcs_Enter;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(172, 10);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 34);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
             // 
             // LB_Contacts
             // 
@@ -352,6 +341,5 @@
         private Label Label5;
         private Label Label4;
         private Button Btn_DeleteImage;
-        private Button button3;
     }
 }
