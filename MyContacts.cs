@@ -60,6 +60,13 @@ namespace WinFormsApp1
                 Group group = (Group)CB_GroupeInMyContacts.SelectedItem;
                 ShowContactsOf(group);
             }
+            if(this.LB_Contacts.Items.Count > 0) {
+                this.LB_Contacts.SelectedIndex = 0;
+            }
+            else
+                {
+                ClearInfos();
+            }
 
         }
 
