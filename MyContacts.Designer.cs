@@ -87,6 +87,7 @@
             TB_Search.Name = "TB_Search";
             TB_Search.Size = new Size(283, 39);
             TB_Search.TabIndex = 0;
+            TB_Search.TextChanged += TB_Search_TextChanged;
             // 
             // Btn_AddContact
             // 

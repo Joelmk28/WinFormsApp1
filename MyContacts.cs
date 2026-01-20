@@ -30,8 +30,9 @@ namespace WinFormsApp1
         {
             Contact contact = (Contact)LB_Contacts.SelectedItem;
             Group group = GetGroupOf(contact);
-            if (group != null) {   
-              DialogResult dialogResult = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce contact ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (group != null)
+            {
+                DialogResult dialogResult = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce contact ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -40,7 +41,7 @@ namespace WinFormsApp1
                 }
             }
 
-             }
+        }
         private void ShowAllContacts()
         {
             this.LB_Contacts.Items.Clear();
@@ -168,7 +169,26 @@ namespace WinFormsApp1
 
         private Group GetGroupOf(Contact contact)
         {
-           return Global.ContactsGroups.FirstOrDefault(g => g.ContactsList.Contains(contact));
+            return Global.ContactsGroups.FirstOrDefault(g => g.ContactsList.Contains(contact));
+        }
+
+        private void TB_Search_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = this.TB_Search.Text.ToLower();
+            this.LB_Contacts.Items.Clear();
+            foreach (Group group in Global.ContactsGroups)
+            {
+                
+                var filteredContacts = group.ContactsList.Where(c =>
+                    c.FirstName.ToLower().Contains(searchText) ||
+                    c.LastName.ToLower().Contains(searchText) ||
+                    c.Email.ToLower().Contains(searchText) ||
+                    c.PhoneNumber.ToLower().Contains(searchText) ||
+                    c.Address.ToLower().Contains(searchText) ||
+                    c.City.ToLower().Contains(searchText)
+                );
+                this.LB_Contacts.Items.AddRange(filteredContacts.ToArray());
+            }
         }
     }
 }
