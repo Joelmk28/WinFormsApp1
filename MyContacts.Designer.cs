@@ -276,6 +276,7 @@
             LB_Name.TabIndex = 2;
             LB_Name.Text = "Prénom Nom";
             LB_Name.TextAlign = ContentAlignment.MiddleCenter;
+            LB_Name.Click += LB_Name_Click;
             // 
             // LB_Groupe
             // 

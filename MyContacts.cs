@@ -60,11 +60,12 @@ namespace WinFormsApp1
                 Group group = (Group)CB_GroupeInMyContacts.SelectedItem;
                 ShowContactsOf(group);
             }
-            if(this.LB_Contacts.Items.Count > 0) {
+            if (this.LB_Contacts.Items.Count > 0)
+            {
                 this.LB_Contacts.SelectedIndex = 0;
             }
             else
-                {
+            {
                 ClearInfos();
             }
 
@@ -110,7 +111,7 @@ namespace WinFormsApp1
             this.LB_Groupe.Text = "";
             this.LB_Ville.Text = "";
             this.PB_Contact_Photo.Image = null;
-            
+
         }
 
 
@@ -121,7 +122,7 @@ namespace WinFormsApp1
             this.LB_Adress.Text = contact.Address;
             this.LB_Email.Text = contact.Email;
             this.LB_Tel.Text = contact.PhoneNumber;
-            this.LB_Groupe.Text = CB_GroupeInMyContacts.SelectedItem.ToString();
+            this.LB_Groupe.Text = GetGroupOf(contact).Name;
             this.LB_Ville.Text = contact.City;
             if (contact.Photo != null)
             {
@@ -145,6 +146,19 @@ namespace WinFormsApp1
         private void PB_Contact_Photo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LB_Name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private Group GetGroupOf(Contact contact)
+        {
+           return Global.ContactsGroups.FirstOrDefault(g => g.ContactsList.Contains(contact));
         }
     }
 }

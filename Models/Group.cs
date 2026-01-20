@@ -3,6 +3,7 @@
 
 namespace WinFormsApp1.Models
 {
+    [Serializable]
     public class Group
     {
         public string ? Name { get; set; }

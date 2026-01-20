@@ -4,6 +4,7 @@ using System.Drawing;
 
 namespace WinFormsApp1.Models
 {
+    [Serializable]
     public class Contact
     {
         
