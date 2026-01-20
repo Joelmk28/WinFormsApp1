@@ -28,9 +28,19 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Contact contact = (Contact)LB_Contacts.SelectedItem;
+            Group group = GetGroupOf(contact);
+            if (group != null) {   
+              DialogResult dialogResult = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce contact ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        }
+                if (dialogResult == DialogResult.Yes)
+                {
+                    group.ContactsList.Remove(contact);
+                    UpdateContactsList();
+                }
+            }
 
+             }
         private void ShowAllContacts()
         {
             this.LB_Contacts.Items.Clear();
